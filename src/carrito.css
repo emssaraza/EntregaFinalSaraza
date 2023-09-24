@@ -1,0 +1,6 @@
+.item-carrito {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin: 8px 0;
+}

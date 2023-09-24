@@ -1,0 +1,10 @@
+.barra-navegacion {
+  position: fixed;
+  top: 0;
+  left: 0;  
+  padding: 30px;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+}

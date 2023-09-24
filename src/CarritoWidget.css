@@ -1,0 +1,20 @@
+.carrito-widget {
+  position: relative;
+  display: inline-block;
+}
+
+.carrito-icono {
+  font-size: 24px;
+  color: #333;
+}
+
+.carrito-notificacion {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 8px;
+  font-size: 12px;
+}
