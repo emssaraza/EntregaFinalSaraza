@@ -12,7 +12,7 @@ const ItemCarrito = ({ item }) => {
       <div >
         <span>x {item.quantity} </span>
         <button
-          class="btn btn-sm btn-danger"
+          className="btn btn-sm btn-danger"
           onClick={() => eliminarItem(item.id)}
         >
           <FaTrash />
