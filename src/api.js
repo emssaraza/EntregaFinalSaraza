@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { addDoc, getFirestore } from "firebase/firestore";
 import { collection, getDocs } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -25,16 +25,21 @@ export async function getProducts() {
     products.push({ id: doc.id, ...doc.data() });
   });
   return products;
-
 }
 
 export async function getProductsByCategory(category) {
-  const products =  await getProducts ()
-  return products.filter((product) => product.category === category)
+  const products = await getProducts();
+  return products.filter((product) => product.category === category);
 }
 
 export async function getProductById(id) {
-  const products =  await getProducts ()
-  return products.find((product) => product.id === id)
+  const products = await getProducts();
+  return products.find((product) => product.id === id);
 }
+
+export async function createCart(items) {
+  const ref = await addDoc(collection(db, "carts"), { items });
+  return ref.id
+}
+
 
